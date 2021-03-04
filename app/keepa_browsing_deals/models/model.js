@@ -6,7 +6,7 @@ const ProductSchema = mongoose.Schema({
     title: String,
     rootCat: Number,
     categories: Array,
-    image: Array,
+    image: String,
 
     // price/rank information
     current: Array,
@@ -20,7 +20,9 @@ const ProductSchema = mongoose.Schema({
     lastUpdate: Number,
     lightningEnd: Number,
     warehouseCondition: Number,
-    warehouseConditionComment: String
+    warehouseConditionComment: String,
+    available: Boolean,
+    queryCategory: Number
 });
 
 module.exports = mongoose.model('KeepaBrowsingDeals', ProductSchema);

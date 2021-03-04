@@ -11,10 +11,10 @@ module.exports = (app) => {
     //app.get('/products/id/:productId', products.findOne);
 
     // Retrieve all documents that match country
-    //app.get('/products/country/:country', products.findCountry);
+    app.get('/api/keepa/browsing-deals/available/:available', products.findAvailable);
 
     // Update a Note with noteId
-    //app.put('/products/:productId', products.update);
+    app.put('/api/keepa/browsing-deals/:productId', products.update);
 
     // Delete a Note with noteId
     //app.delete('/products/:productId', products.delete);
